@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\Plugin\bin\$(Configuration)\net6.0\Plugin.dll" Link="Plugin.dll" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="..\Plugin\bin\$(Configuration)\net6.0\Plugin.pdb" Link="Plugin.pdb" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LoggingFramework\LoggingFramework.csproj" />
+    <ProjectReference Include="..\Plugin\Plugin.csproj" ReferenceOutputAssembly="false" />
+  </ItemGroup>
+
+</Project>
